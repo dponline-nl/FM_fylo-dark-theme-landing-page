@@ -30,9 +30,45 @@ h6 {
     font-family: "Raleway", sans-serif;
 }
 
+h1 {
+    line-height: 1.5;
+    text-align: center;
+    font-size: 1.75rem;
+}
+
 a {
     text-decoration: none;
     color: hsl(0, 0%, 100%);
+}
+
+button,
+input {
+    font-family: "Raleway", sans-serif;
+    border-radius: 30px;
+    border: none;
+}
+
+button {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1.1rem;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(176, 68%, 64%);
+    background: linear-gradient(120deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    cursor: pointer;
+}
+
+input {
+    text-align: left;
+    padding: 1.1rem;
+}
+
+p {
+    padding: 2rem 0;
+    text-align: center;
+    line-height: 1.8;
 }
 
 .center-hv {
@@ -46,6 +82,13 @@ a {
     flex-direction: row;
     justify-content: space-between;
     padding: 1.2em;
+    background-color: hsl(217, 28%, 15%);
+}
+
+.header-logo {
+    max-height: 39px;
+    width: auto;
+    max-width: 100px;
 }
 
 .topnav {
@@ -57,6 +100,7 @@ a {
 .topnav-link {
     margin: 0 1em;
     text-decoration: none;
+    font-family: "Raleway", sans-serif;
 }
 
 .topnav-link:hover {
@@ -64,7 +108,156 @@ a {
 }
 
 .card {
+    width: 100%;
     max-width: 375px;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.intro::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 62%;
+    background-color: hsl(217, 28%, 15%);
+    background-image: url("img/bg-curvy-mobile.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.intro {
+    position: relative;
+    background-color: transparent;
+    padding: 0;
+}
+
+.intro-img {
+    padding: 2.75rem 0;
+}
+
+.intro-header {
+}
+
+.intro-btn {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.card-short {
+    margin: 4rem 0;
+}
+
+.title-small {
+    font-size: 1.2rem;
+}
+
+.card-productive {
+    text-align: left;
+}
+
+.card-url {
+    border-bottom: 1px solid hsl(176, 68%, 64%);
+    color: hsl(176, 68%, 64%);
+}
+
+.card-url:hover {
+    opacity: 0.6;
+}
+
+.testimonial {
+    position: relative;
+    border-radius: 4px;
+    background-color: hsl(219, 30%, 18%);
+    padding: 1.5rem;
+    margin: 1.8rem 0.5rem;
+}
+
+.testimonial:nth-child(1)::before {
+    content: " ";
+    position: absolute;
+    width: 28px;
+    height: 20px;
+    top: -20px;
+    left: 6px;
+    background-image: url("img/bg-quotes.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.quote {
+    text-align: left;
+}
+
+.testimonial-footer {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "img name"
+        "img function";
+}
+
+.testimonial-img {
+    grid-area: img;
+    border-radius: 50%;
+    width: 32px;
+}
+.testimonial-name {
+    text-align: left;
+    grid-area: name;
+    font-weight: 700;
+    padding: 0 0 0.2rem 0;
+}
+.testimonial-function {
+    text-align: left;
+    grid-area: function;
+    font-size: 0.7rem;
+}
+
+.early-access-input,
+.early-access-btn {
+    width: 90%;
+    margin: 0.2rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 30px auto;
+    row-gap: 0.57em;
+    text-align: left;
+}
+
+.card-nav-footer {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+.nav-footer {
+    list-style: none;
+    margin: 1rem 0;
+}
+.nav-footer li {
+    padding: 0.35rem 0;
+}
+
+.footer-nav-link:hover,
+.social-btn:hover {
+    opacity: 0.6;
+}
+
+.nav-footer-social {
+    text-align: center;
+}
+.social-btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin: 0.4rem;
+    padding: 0.25rem 0.5rem;
 }
 
 .attribution {
