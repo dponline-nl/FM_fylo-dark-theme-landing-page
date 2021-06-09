@@ -12,6 +12,11 @@ body {
     color: hsl(0, 0%, 100%);
 }
 
+main {
+    border: 1px solid orange;
+    max-width: 375px;
+}
+
 img {
     display: block;
     width: 100%;
@@ -31,7 +36,6 @@ h6 {
 
 h1 {
     line-height: 1.5;
-    text-align: center;
     font-size: 1.5rem;
 }
 
@@ -65,8 +69,6 @@ input {
 }
 
 p {
-    padding: 0.5rem 0;
-    text-align: center;
     line-height: 1.8;
 }
 
@@ -74,24 +76,29 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    border: 1px solid salmon;
 }
 
+/* Header*/
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    max-width: 375px;
+
     padding: 1.2em;
     background-color: hsl(217, 28%, 15%);
+
+    border: 1px solid green;
 }
 
 .header-logo {
     width: 80px;
     height: auto;
-    max-width: 100px;
 }
 
+/* Header navigation */
 .topnav {
     display: flex;
     flex-direction: row;
@@ -108,15 +115,21 @@ p {
     opacity: 0.6;
 }
 
+/*
+Styling the big cards
+*/
+
+/* Default card settings */
 .card {
     width: 100%;
-    max-width: 375px;
     padding: 0.5rem 1.8rem;
-    text-align: center;
     margin: 4rem 0;
+
+    border: 1px solid red;
 }
 
-.intro::before {
+/* Intro card*/
+#card-intro::before {
     content: " ";
     position: absolute;
     top: 0;
@@ -130,7 +143,8 @@ p {
     background-repeat: no-repeat;
 }
 
-.intro {
+#card-intro {
+    text-align: center;
     position: relative;
     background-color: transparent;
     margin-bottom: 4rem;
@@ -148,16 +162,23 @@ p {
     margin-top: 1.5rem;
 }
 
-.card-short {
-    margin: 4rem 0 5rem 0;
+/* Info boxes card */
+#card-info-boxes {
+    text-align: center;
 }
 
-.title-small {
+.title-info-box {
     font-size: 1.15rem;
-    margin-top: 1.5rem;
 }
 
-.card-productive {
+.info-box-img {
+    display: inline-block;
+    width: 83px;
+    height: auto;
+}
+
+/* Productive card */
+#card-productive {
     text-align: left;
     padding: 0.5rem 0.8rem;
 }
@@ -167,21 +188,22 @@ p {
 }
 
 .title-productive {
-    text-align: left;
+    font-size: 1.15rem;
     padding: 0.5rem 0.8rem;
-}
-.card-productive > p {
-    text-align: left;
-    padding: 0.5rem 0.8rem;
-}
-.card-url {
-    border-bottom: 1px solid hsl(176, 68%, 64%);
-    color: hsl(176, 68%, 64%);
-    margin-left: 0.8rem;
 }
 
-.card-url:hover {
+.productive-url {
+    border-bottom: 1px solid hsl(176, 68%, 64%);
+    color: hsl(176, 68%, 64%);
+}
+
+.productive-url:hover {
     opacity: 0.6;
+}
+
+/* Testimonials card */
+#testimonial-card {
+    padding: 1.5rem 2rem;
 }
 
 .testimonial {
@@ -189,7 +211,7 @@ p {
     border-radius: 4px;
     background-color: hsl(219, 30%, 18%);
     padding: 1.5rem;
-    margin: 1.8rem 0.5rem;
+    margin: 1.8rem 0;
 }
 
 .testimonial:nth-child(1)::before {
@@ -223,28 +245,40 @@ p {
     border-radius: 50%;
     width: 32px;
 }
+
 .testimonial-name {
-    text-align: left;
     grid-area: name;
     font-weight: 700;
     padding: 0 0 0.2rem 0;
 }
 .testimonial-function {
-    text-align: left;
     grid-area: function;
     font-size: 0.6rem;
 }
 
-.card-early-access {
+/* Early access card */
+#card-early-access {
     background-color: hsl(217, 28%, 15%);
     border-radius: 10px;
     box-shadow: 5px 5px 8px 1px hsl(217, 28%, 10%);
     padding: 2rem;
 }
+
 .early-access-input,
 .early-access-btn {
     width: 90%;
     margin: 0.2rem;
+}
+
+.title-early-access {
+    font-size: 1.15rem;
+}
+
+/* Card footer */
+#card-footer {
+    background-color: hsl(216, 53%, 9%);
+    display: inline-block;
+    width: 100%;
 }
 
 .contact-info {
@@ -254,16 +288,11 @@ p {
     text-align: left;
 }
 
-.card-nav-footer {
-    background-color: hsl(216, 53%, 9%);
-    display: inline-block;
-    width: 100%;
-    text-align: left;
-}
 .nav-footer {
     list-style: none;
     margin: 1rem 0;
 }
+
 .nav-footer li {
     padding: 0.35rem 0;
 }
@@ -276,6 +305,7 @@ p {
 .nav-footer-social {
     text-align: center;
 }
+
 .social-btn {
     display: inline-block;
     width: 30px;
@@ -285,6 +315,8 @@ p {
     margin: 0.4rem;
     padding: 0.25rem 0.5rem;
 }
+
+/********/
 
 .attribution {
     font-size: 11px;
