@@ -13,7 +13,7 @@ body {
 }
 
 main {
-    border: 1px solid orange;
+    /*border: 1px solid orange;*/
     max-width: 375px;
 }
 
@@ -58,14 +58,22 @@ button {
     text-align: center;
     padding: 1.1rem;
     color: hsl(0, 0%, 100%);
-    background-color: hsl(176, 68%, 64%);
+    background-color: hsl(198, 60%, 50%);
     background: linear-gradient(120deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
     cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(176, 68%, 64%);
+    background: linear-gradient(120deg, hsl(176, 68%, 64%), hsl(176, 68%, 64%));
 }
 
 input {
     text-align: left;
     padding: 1.1rem;
+}
+input:focus {
+    outline: none;
 }
 
 p {
@@ -77,7 +85,7 @@ p {
     flex-direction: column;
     align-items: center;
 
-    border: 1px solid salmon;
+    /*border: 1px solid salmon;*/
 }
 
 /* Header*/
@@ -90,7 +98,7 @@ p {
     padding: 1.2em;
     background-color: hsl(217, 28%, 15%);
 
-    border: 1px solid green;
+    /*border: 1px solid green;*/
 }
 
 .header-logo {
@@ -112,7 +120,8 @@ p {
 }
 
 .topnav-link:hover {
-    opacity: 0.6;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 /*
@@ -122,10 +131,10 @@ Styling the big cards
 /* Default card settings */
 .card {
     width: 100%;
-    padding: 0.5rem 1.8rem;
-    margin: 4rem 0;
+    padding: 1.5rem 1.8rem;
+    margin: 6rem 0;
 
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 /* Intro card*/
@@ -149,11 +158,16 @@ Styling the big cards
     background-color: transparent;
     margin-bottom: 4rem;
     margin-top: 0;
-    padding: 0.5rem 2.3rem;
+    padding-left: 2.23rem;
+    padding-right: 2.23rem;
 }
 
 .intro-img {
-    padding: 1rem 0 2.75rem 0;
+    margin-bottom: 2.6rem;
+}
+
+.intro-header {
+    margin-bottom: 1.5rem;
 }
 
 .intro-btn {
@@ -165,22 +179,30 @@ Styling the big cards
 /* Info boxes card */
 #card-info-boxes {
     text-align: center;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
 }
 
 .title-info-box {
     font-size: 1.15rem;
+    margin-bottom: 0.75rem;
 }
 
 .info-box-img {
     display: inline-block;
-    width: 83px;
-    height: auto;
+    width: auto;
+    height: 75px;
+    margin-bottom: 1.75rem;
+}
+
+#card-info-boxes p {
+    margin-bottom: 6rem;
 }
 
 /* Productive card */
 #card-productive {
     text-align: left;
-    padding: 0.5rem 0.8rem;
+    padding-bottom: 4rem;
 }
 
 .card-productive-img {
@@ -189,7 +211,11 @@ Styling the big cards
 
 .title-productive {
     font-size: 1.15rem;
-    padding: 0.5rem 0.8rem;
+    margin-bottom: 1rem;
+}
+
+#card-productive p {
+    margin-bottom: 1rem;
 }
 
 .productive-url {
@@ -198,7 +224,7 @@ Styling the big cards
 }
 
 .productive-url:hover {
-    opacity: 0.6;
+    color: #fff;
 }
 
 /* Testimonials card */
@@ -210,7 +236,7 @@ Styling the big cards
     position: relative;
     border-radius: 4px;
     background-color: hsl(219, 30%, 18%);
-    padding: 1.5rem;
+    padding: 1.7rem;
     margin: 1.8rem 0;
 }
 
@@ -226,7 +252,6 @@ Styling the big cards
     background-size: cover;
 }
 .quote {
-    text-align: left;
     font-size: 0.65rem;
     padding-bottom: 1.5rem;
 }
@@ -258,36 +283,57 @@ Styling the big cards
 
 /* Early access card */
 #card-early-access {
+    position: relative;
+    z-index: 99;
     background-color: hsl(217, 28%, 15%);
     border-radius: 10px;
     box-shadow: 5px 5px 8px 1px hsl(217, 28%, 10%);
-    padding: 2rem;
+    text-align: center;
+    padding: 1.8rem;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .early-access-input,
 .early-access-btn {
-    width: 90%;
-    margin: 0.2rem;
+    width: 100%;
+    margin: 1rem 0;
+}
+.early-access-input:invalid {
+    border: 2px solid red;
 }
 
 .title-early-access {
     font-size: 1.15rem;
+    padding: 1rem 0;
 }
 
 /* Card footer */
 #card-footer {
     background-color: hsl(216, 53%, 9%);
-    display: inline-block;
     width: 100%;
+    margin-top: -12rem;
+    padding-top: 18rem;
+}
+
+.footer-logo {
+    max-width: 200px;
+    margin-bottom: 3rem;
 }
 
 .contact-info {
     display: grid;
-    grid-template-columns: 30px auto;
-    row-gap: 0.57em;
+    grid-template-columns: 2.25rem auto;
+    row-gap: 1rem;
     text-align: left;
+    margin-bottom: 6rem;
+    font-size: 1.01rem;
 }
 
+.contact-info-icon {
+    width: auto;
+    max-height: 18px;
+}
 .nav-footer {
     list-style: none;
     margin: 1rem 0;
@@ -297,9 +343,13 @@ Styling the big cards
     padding: 0.35rem 0;
 }
 
-.footer-nav-link:hover,
+.footer-nav-link:hover {
+    font-weight: 700;
+}
+
 .social-btn:hover {
-    opacity: 0.6;
+    border-color: hsl(176, 68%, 64%);
+    color: hsl(176, 68%, 64%);
 }
 
 .nav-footer-social {
