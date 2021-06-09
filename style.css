@@ -399,9 +399,67 @@ Styling the big cards
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        max-width: 960px;
+        margin: 6rem auto;
     }
 
     .info-box {
-        width: 45%;
+        max-width: 370px;
+    }
+
+    #card-productive {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+        padding-left: 2.6rem;
+        padding-right: 2.6rem;
+    }
+
+    #card-productive > * {
+        width: 48%;
+    }
+
+    .title-productive {
+        font-size: 2.3rem;
+        max-width: 20rem;
+    }
+
+    #testimonial-card {
+        display: flex;
+        gap: 1.8rem;
+    }
+
+    .testimonial:nth-child(1)::before {
+        width: 40px;
+        height: 32px;
+        top: -25px;
+        left: -6px;
+        z-index: -1;
+    }
+
+    #card-early-access {
+        max-width: 900px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    #card-early-access > p {
+        padding: 0 4rem;
+    }
+    .early-access-input {
+        width: 60%;
+        margin-right: 1rem;
+    }
+    .early-access-btn {
+        width: 30%;
+    }
+
+    footer {
+        margin-top: -7rem;
+    }
+
+    #card-footer {
+        max-width: 1100px;
     }
 }
