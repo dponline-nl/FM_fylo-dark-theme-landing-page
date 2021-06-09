@@ -13,8 +13,16 @@ body {
 }
 
 main {
-    /*border: 1px solid orange;*/
-    max-width: 375px;
+    min-width: 375px;
+    max-width: 700px;
+    margin: 0 3rem;
+}
+
+footer {
+    background-color: hsl(216, 53%, 9%);
+    width: 100%;
+    text-align: center;
+    margin-top: -12rem;
 }
 
 img {
@@ -70,7 +78,7 @@ button:hover {
 
 input {
     text-align: left;
-    padding: 1.1rem;
+    padding: 1rem;
 }
 input:focus {
     outline: none;
@@ -84,8 +92,6 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /*border: 1px solid salmon;*/
 }
 
 /* Header*/
@@ -95,11 +101,27 @@ p {
     justify-content: space-between;
     width: 100%;
 
-    padding: 1.2em;
+    padding: 1.2rem 2.23rem 0rem 2.23rem;
+
     background-color: hsl(217, 28%, 15%);
 
     /*border: 1px solid green;*/
 }
+/*
+.header::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 53%;
+    right: 0;
+    z-index: -1;
+    background-color: hsl(217, 28%, 15%);
+    background-image: url("img/bg-curvy-mobile.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}*/
 
 .header-logo {
     width: 80px;
@@ -133,25 +155,9 @@ Styling the big cards
     width: 100%;
     padding: 1.5rem 1.8rem;
     margin: 6rem 0;
-
-    /*border: 1px solid red;*/
 }
 
 /* Intro card*/
-#card-intro::before {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 57%;
-    background-color: hsl(217, 28%, 15%);
-    background-image: url("img/bg-curvy-mobile.svg");
-    background-position: bottom;
-    background-repeat: no-repeat;
-}
-
 #card-intro {
     text-align: center;
     position: relative;
@@ -171,9 +177,9 @@ Styling the big cards
 }
 
 .intro-btn {
-    padding-left: 5rem;
-    padding-right: 5rem;
-    margin-top: 1.5rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    margin-top: 1.3rem;
 }
 
 /* Info boxes card */
@@ -310,10 +316,12 @@ Styling the big cards
 
 /* Card footer */
 #card-footer {
+    display: inline-block;
     background-color: hsl(216, 53%, 9%);
     width: 100%;
-    margin-top: -12rem;
-    padding-top: 18rem;
+    max-width: 700px;
+    padding-top: 12rem;
+    text-align: left;
 }
 
 .footer-logo {
@@ -374,4 +382,26 @@ Styling the big cards
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 800px) {
+    main {
+        min-width: 750px;
+        max-width: 1200px;
+    }
+
+    #card-intro {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    #card-info-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .info-box {
+        width: 45%;
+    }
 }

@@ -20,13 +20,13 @@
     </head>
     <body>
         <div class="center-hv">
+            <div class="header">
+                <img src="img/logo.svg" alt="" class="header-logo" />
+                <nav class="topnav">
+                    <a href="#" class="topnav-link">Features</a> <a href="#" class="topnav-link">Team</a> <a href="#" class="topnav-link">Sign In</a>
+                </nav>
+            </div>
             <main>
-                <div class="header">
-                    <img src="img/logo.svg" alt="" class="header-logo" />
-                    <nav class="topnav">
-                        <a href="#" class="topnav-link">Features</a> <a href="#" class="topnav-link">Team</a> <a href="#" class="topnav-link">Sign In</a>
-                    </nav>
-                </div>
                 <div class="card" id="card-intro">
                     <img src="img/illustration-intro.png" alt="" class="intro-img" />
                     <h1 class="intro-header">All your files in one secure location, accessible anywhere.</h1>
@@ -37,24 +37,35 @@
                     <button class="intro-btn">Get Started</button>
                 </div>
                 <div class="card" id="card-info-boxes">
-                    <img src="img/icon-access-anywhere.svg" alt="" class="info-box-img" />
-                    <h1 class="title-info-box">Access your files, anywhere</h1>
-                    <p>The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
+                    <div class="info-box">
+                        <img src="img/icon-access-anywhere.svg" alt="" class="info-box-img" />
+                        <h1 class="title-info-box">Access your files, anywhere</h1>
+                        <p>The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
+                    </div>
 
-                    <img src="img/icon-security.svg" alt="" class="info-box-img" />
-                    <h1 class="title-info-box">Security you can trust</h1>
-                    <p>2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
+                    <div class="info-box">
+                        <img src="img/icon-security.svg" alt="" class="info-box-img" />
+                        <h1 class="title-info-box">Security you can trust</h1>
+                        <p>
+                            2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your
+                            files.
+                        </p>
+                    </div>
 
-                    <img src="img/icon-collaboration.svg" alt="" class="info-box-img" />
-                    <h1 class="title-info-box">Real-time collaboration</h1>
-                    <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+                    <div class="info-box">
+                        <img src="img/icon-collaboration.svg" alt="" class="info-box-img" />
+                        <h1 class="title-info-box">Real-time collaboration</h1>
+                        <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+                    </div>
 
-                    <img src="img/icon-any-file.svg" alt="" class="info-box-img" />
-                    <h1 class="title-info-box">Store any type of file</h1>
-                    <p>
-                        Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and
-                        shared.
-                    </p>
+                    <div class="info-box">
+                        <img src="img/icon-any-file.svg" alt="" class="info-box-img" />
+                        <h1 class="title-info-box">Store any type of file</h1>
+                        <p>
+                            Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and
+                            shared.
+                        </p>
+                    </div>
                 </div>
                 <div class="card" id="card-productive">
                     <img src="img/illustration-stay-productive.png" alt="" class="card-productive-img" />
@@ -107,6 +118,8 @@
                     <input type="email" name="email" placeholder="email@example.com" class="early-access-input" />
                     <button class="early-access-btn">Started For Free</button>
                 </div>
+            </main>
+            <footer>
                 <div class="card" id="card-footer">
                     <img src="img/logo.svg" alt="" class="footer-logo" />
                     <div class="contact-info">
@@ -135,13 +148,10 @@
                         <a href="" class="social-btn"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-            </main>
+                <p class="attribution">
+                    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Dennis</a>.
+                </p>
+            </footer>
         </div>
-
-        <footer>
-            <p class="attribution">
-                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Dennis</a>.
-            </p>
-        </footer>
     </body>
 </html>
