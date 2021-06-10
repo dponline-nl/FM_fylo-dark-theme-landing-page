@@ -15,7 +15,7 @@ Your users should be able to:
 
 ### Screenshot
 
-![](./Screenshot.jpg)
+![](./Screenshot.png)
 
 ### Links
 
