@@ -64,7 +64,7 @@ button {
     font-weight: 700;
     font-size: 1rem;
     text-align: center;
-    padding: 1.1rem;
+    padding: 0.7rem;
     color: hsl(0, 0%, 100%);
     background-color: hsl(198, 60%, 50%);
     background: linear-gradient(120deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
@@ -100,32 +100,31 @@ p {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-
+    height: 60px;
     padding: 1.2rem 2.23rem 0rem 2.23rem;
-
     background-color: hsl(217, 28%, 15%);
-
-    /*border: 1px solid green;*/
+    position: relative;
 }
-/*
+
 .header::after {
     content: " ";
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
-    bottom: 53%;
-    right: 0;
+    width: 100vw;
+    height: 500px;
     z-index: -1;
     background-color: hsl(217, 28%, 15%);
     background-image: url("img/bg-curvy-mobile.svg");
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: 100%;
-}*/
+    background-size: 100% 50%;
+}
 
 .header-logo {
-    width: 80px;
-    height: auto;
+    height: 100%;
+    width: auto;
+    padding-bottom: 0.5rem;
 }
 
 /* Header navigation */
@@ -159,16 +158,19 @@ Styling the big cards
 
 /* Intro card*/
 #card-intro {
+    max-width: 500px;
     text-align: center;
     position: relative;
     background-color: transparent;
+    margin: 0 auto;
     margin-bottom: 4rem;
-    margin-top: 0;
     padding-left: 2.23rem;
     padding-right: 2.23rem;
 }
 
 .intro-img {
+    display: inline-block;
+    max-width: 370px;
     margin-bottom: 2.6rem;
 }
 
@@ -212,6 +214,7 @@ Styling the big cards
 }
 
 .card-productive-img {
+    max-width: 370px;
     padding: 0 0 2.5rem 0;
 }
 
@@ -303,6 +306,7 @@ Styling the big cards
 .early-access-input,
 .early-access-btn {
     width: 100%;
+    padding: 0.9rem;
     margin: 1rem 0;
 }
 .early-access-input:invalid {
@@ -331,17 +335,48 @@ Styling the big cards
 
 .contact-info {
     display: grid;
-    grid-template-columns: 2.25rem auto;
+    grid-template-columns: 2.6rem auto;
+    grid-template-areas:
+        "l-icon location"
+        "p-icon phone"
+        "m-icon mail";
     row-gap: 1rem;
-    text-align: left;
     margin-bottom: 6rem;
-    font-size: 1.01rem;
+    font-size: 1rem;
 }
 
-.contact-info-icon {
+.contact-location-icon,
+.contact-phone-icon,
+.contact-email-icon {
     width: auto;
-    max-height: 18px;
+    height: 18px;
+    margin: 0.3rem;
 }
+
+.contact-location-icon {
+    grid-area: l-icon;
+}
+
+.contact-location {
+    grid-area: location;
+}
+
+.contact-phone-icon {
+    grid-area: p-icon;
+}
+
+.contact-phone-number {
+    grid-area: phone;
+}
+
+.contact-email-icon {
+    grid-area: m-icon;
+}
+
+.contact-email {
+    grid-area: mail;
+}
+
 .nav-footer {
     list-style: none;
     margin: 1rem 0;
@@ -355,13 +390,9 @@ Styling the big cards
     font-weight: 700;
 }
 
-.social-btn:hover {
-    border-color: hsl(176, 68%, 64%);
-    color: hsl(176, 68%, 64%);
-}
-
 .nav-footer-social {
     text-align: center;
+    margin-top: 5rem;
 }
 
 .social-btn {
@@ -374,6 +405,11 @@ Styling the big cards
     padding: 0.25rem 0.5rem;
 }
 
+.social-btn:hover {
+    border-color: hsl(176, 68%, 64%);
+    color: hsl(176, 68%, 64%);
+}
+
 /********/
 
 .attribution {
@@ -384,15 +420,38 @@ Styling the big cards
     color: hsl(228, 45%, 44%);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
     main {
         min-width: 750px;
         max-width: 1200px;
     }
 
+    .header {
+        height: 80px;
+        padding: 2rem 2rem 0.5rem 2rem;
+    }
+
+    .header::after {
+        height: 1400px;
+    }
+
     #card-intro {
-        max-width: 500px;
+        max-width: 800px;
         margin: 0 auto;
+        font-size: 1.5rem;
+    }
+
+    .intro-img {
+        max-width: 100%;
+    }
+
+    .intro-header {
+        font-size: 2.5rem;
+    }
+
+    .intro-btn {
+        font-size: 1.1rem;
+        padding: 1.2rem 7rem;
     }
 
     #card-info-boxes {
@@ -401,6 +460,8 @@ Styling the big cards
         justify-content: space-between;
         max-width: 960px;
         margin: 6rem auto;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .info-box {
@@ -414,6 +475,7 @@ Styling the big cards
         max-width: 1100px;
         padding-left: 2.6rem;
         padding-right: 2.6rem;
+        margin: 0 auto;
     }
 
     #card-productive > * {
@@ -428,6 +490,14 @@ Styling the big cards
     #testimonial-card {
         display: flex;
         gap: 1.8rem;
+    }
+
+    .quote {
+        font-size: 0.94rem;
+    }
+
+    .testimonial-function {
+        font-size: 0.7rem;
     }
 
     .testimonial:nth-child(1)::before {
@@ -459,7 +529,36 @@ Styling the big cards
         margin-top: -7rem;
     }
 
+    .footer-logo {
+        max-width: 175px;
+        margin-bottom: 2rem;
+    }
+
     #card-footer {
-        max-width: 1100px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .card-footer-block {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .card-footer-block > * {
+        margin: 0;
+    }
+
+    .contact-info {
+        grid-template-columns: 2.6rem 2fr 2.6rem 1fr;
+        grid-template-areas:
+            "l-icon location p-icon phone"
+            "l-icon location m-icon mail";
+        row-gap: 0;
+        max-width: 60%;
+    }
+
+    .contact-location {
+        max-width: 360px;
     }
 }
